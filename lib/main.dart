@@ -6,6 +6,8 @@ import 'package:visit_provision4_2020/HomePage/ReligiousPlace.dart';
 import 'package:visit_provision4_2020/HomePage/Trekking.dart';
 import 'package:visit_provision4_2020/HomePage/Scenery.dart';
 import 'package:visit_provision4_2020/HomePage/Titlepage.dart';
+
+import 'drawer.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -33,6 +35,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Titlepage(),
+              CurvedDrawer(),
               PicnicList(),
               Homestay(),
               Scenery(),
@@ -40,6 +43,7 @@ class MyApp extends StatelessWidget {
               Trekking(),
             ],
           ),
+
         ),
       ),
 
