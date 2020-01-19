@@ -7,6 +7,7 @@ import 'package:visit_provision4_2020/HomePage/Trekking.dart';
 import 'package:visit_provision4_2020/HomePage/Scenery.dart';
 import 'package:visit_provision4_2020/HomePage/Titlepage.dart';
 import 'package:visit_provision4_2020/drawer_descrp/drawer.dart';
+import 'package:visit_provision4_2020/Explore/explorePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         body: new SingleChildScrollView(
           child: new Column(
             children: <Widget>[
+              ImageCarousel(),
               Titlepage(),
               PicnicList(),
               Homestay(),
