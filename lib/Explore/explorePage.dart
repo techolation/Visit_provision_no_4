@@ -12,12 +12,10 @@ class ImageCarouselState extends State<ImageCarousel>{
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-
-    Widget imageslidercarousel = new Column(
+     
+     return Column(
       children: <Widget>[
         new Container(
-          // padding: EdgeInsets.all(10.0),
-          // padding: const EdgeInsets.only(left: 50),
           height: height / 4,
           width: width,
           child: new Stack(
@@ -30,11 +28,11 @@ class ImageCarouselState extends State<ImageCarousel>{
                   autoplayDuration: Duration(seconds: 2),
                   showIndicator: false,
                   images: [
-                    AssetImage('images/pokhara1.jpg'),
-                    AssetImage('images/Pokhara2.jpg'),
-                    AssetImage('images/Pokhara3.jpg'),
-                    AssetImage('images/Pokhara4.Jpg'),
-                    AssetImage('images/Pokhara5.jpg'),
+                    AssetImage('assets/images/exploreImage/pokhara1.jpg'),
+                    AssetImage('assets/images/exploreImage/Pokhara2.jpg'),
+                    AssetImage('assets/images/exploreImage/Pokhara3.jpg'),
+                    AssetImage('assets/images/exploreImage/Pokhara4.Jpg'),
+                    AssetImage('assets/images/exploreImage/Pokhara5.jpg'),
                     
                   ],
                 ),
@@ -46,9 +44,9 @@ class ImageCarouselState extends State<ImageCarousel>{
                 mainAxisSize: MainAxisSize.max,
                // mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image(image: AssetImage('images/logopakku.png'),
-                  height: 40,
-                  width: 50,)
+                  Image(image: AssetImage('assets/images/exploreImage/homeicon.png'),
+                  height: 20,
+                  width: 20,)
                 ],
               ),
               ),
@@ -56,19 +54,20 @@ class ImageCarouselState extends State<ImageCarousel>{
           ),
         ),
         Text(
-          'Welcome to Provience No 4',
+          'Welcome to Province No 4',
           style: TextStyle(fontSize: 18, color: Colors.blue),
         ),
       ],
     );
-    return Scaffold(
+
+    // return Scaffold(
       
-      body: ListView(
-        children: <Widget>[
-          imageslidercarousel,
-        ],
-      ),
-    );
+    //   body: ListView(
+    //     children: <Widget>[
+    //       imageslidercarousel,
+    //     ],
+    //   ),
+    // );
   }
 }
 

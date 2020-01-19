@@ -21,18 +21,6 @@ class MyApp extends StatelessWidget {
         body: new SingleChildScrollView(
           child: new Column(
             children: <Widget>[
-              Container(
-                width: double.infinity,
-                height: double.infinity,
-                decoration: new BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: Colors.red,
-                  image: new DecorationImage(
-                    image: new AssetImage("assets/images/picnic1.jpg"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
               ImageCarousel(),
               Titlepage(),
               PicnicList(),
