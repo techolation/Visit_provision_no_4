@@ -5,15 +5,13 @@ class ImageCarousel extends StatefulWidget {
   ImageCarouselState createState() => new ImageCarouselState();
 }
 
-class ImageCarouselState extends State<ImageCarousel>{
-   
-
+class ImageCarouselState extends State<ImageCarousel> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-     
-     return Column(
+
+    return Column(
       children: <Widget>[
         new Container(
           height: height / 4,
@@ -22,7 +20,6 @@ class ImageCarouselState extends State<ImageCarousel>{
             children: <Widget>[
               ClipPath(
                 clipper: RoundClipper(),
-                
                 child: Carousel(
                   animationDuration: Duration(seconds: 2),
                   autoplayDuration: Duration(seconds: 2),
@@ -33,35 +30,36 @@ class ImageCarouselState extends State<ImageCarousel>{
                     AssetImage('assets/images/exploreImage/Pokhara3.jpg'),
                     AssetImage('assets/images/exploreImage/Pokhara4.Jpg'),
                     AssetImage('assets/images/exploreImage/Pokhara5.jpg'),
-                    
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(170, 100, 20, 20),
-              
-             child: Column(
-                mainAxisSize: MainAxisSize.max,
-               // mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Image(image: AssetImage('assets/images/exploreImage/homeicon.png'),
-                  height: 20,
-                  width: 20,)
-                ],
-              ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Image(
+                      image:
+                          AssetImage('assets/images/exploreImage/homeicon.png'),
+                      height: 20,
+                      width: 20,
+                    )
+                  ],
+                ),
               ),
             ],
           ),
         ),
         Text(
           'Welcome to Province No 4',
-          style: TextStyle(fontSize: 18, color: Colors.blue),
+          style: TextStyle(fontSize: 18, color: Colors.black),
         ),
       ],
     );
 
     // return Scaffold(
-      
+
     //   body: ListView(
     //     children: <Widget>[
     //       imageslidercarousel,

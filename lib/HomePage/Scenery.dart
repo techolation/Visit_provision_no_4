@@ -1,20 +1,40 @@
 import 'package:flutter/material.dart';
 
 class Scenery extends StatelessWidget {
+  Widget headingWidget(BuildContext context, String title) {
+    return Container(
+        child: Stack(children: <Widget>[
+      Container(
+          padding: const EdgeInsets.only(top: 5.0, left: 20.0),
+          child: Row(children: <Widget>[
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(width: 75),
+            SizedBox(width: 100),
+            RaisedButton(
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(12.0),
+              ),
+              onPressed: () {},
+              color: Colors.white,
+              textColor: Colors.black,
+              child:
+                  Text("Explore".toUpperCase(), style: TextStyle(fontSize: 8)),
+            ),
+          ]))
+    ]));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
         child: Stack(children: <Widget>[
-      Container(
-        padding: const EdgeInsets.only(top: 18.0, left: 20.0),
-        child: Text(
-          'Scenery',
-          style: TextStyle(
-            fontSize: 18.0,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      headingWidget(context, 'Adventure'),
       Padding(
         padding: const EdgeInsets.only(top: 55.0, left: 20.0),
         child: SizedBox(
