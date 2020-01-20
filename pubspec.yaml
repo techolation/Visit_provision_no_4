@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  carousel_pro: ^0.0.13 
   flutter:
     sdk: flutter
 
@@ -46,6 +47,13 @@ flutter:
     - assets/images/lumle.jpg
     - assets/images/picnic1.jpg
     - assets/images/pokhara.jpeg
+
+    #prakash description images.
+    - images/phewa/phewa1.jpg
+    - images/phewa/phewa2.jpg
+    - images/phewa/phewa3.jpg
+    - images/phewa/phewa4.jpg
+    - images/routes/routephewa.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
