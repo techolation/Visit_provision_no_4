@@ -4,6 +4,7 @@ class Titlepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 10),
       child: SizedBox(
           height: 110.0,
           child: Column(
@@ -21,6 +22,7 @@ class Titlepage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   raisedButton(context, "Trekking"),
+                  raisedButton(context, "Scenery"),
                   raisedButton(context, "Scenery"),
                 ],
               ),

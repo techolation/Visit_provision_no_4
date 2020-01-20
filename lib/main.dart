@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         body: new SingleChildScrollView(
           child: new Column(
             children: <Widget>[
-              ImageCarousel(),
+              ImageCarouselre(),
               Titlepage(),
               PicnicList(),
               Homestay(),

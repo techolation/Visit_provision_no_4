@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:visit_provision4_2020/description.dart';
 
 class PicnicList extends StatelessWidget {
   Widget headingWidget(BuildContext context, String title) {
@@ -91,81 +92,79 @@ class PicnicList extends StatelessWidget {
   Widget cardItemWidget(BuildContext context, String image, String title,
       String desc, String icon) {
     return GestureDetector(
-        // onTap: (() {
-        //   Navigator.push(
-        //       context,
-        //       new MaterialPageRoute(
-        //           builder: (context) => DetailPageName(image, title)));
-        // }),
+        onTap: (() {
+          Navigator.push(context,
+              new MaterialPageRoute(builder: (context) => Description()));
+        }),
         child: Container(
-      width: 220.0,
-      height: 180.0,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8.0), color: Colors.white),
-      child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Stack(
+          width: 220.0,
+          height: 180.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0), color: Colors.white),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Container(
-                  width: 220.0,
-                  height: 110.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(image),
+                Stack(
+                  children: <Widget>[
+                    Container(
+                      width: 220.0,
+                      height: 110.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(image),
+                        ),
+                      ),
                     ),
-                  ),
+                    // Positioned(
+                    //   left: 200,
+                    //   top: 8.0,
+                    //   child: Column(
+                    //     crossAxisAlignment: CrossAxisAlignment.center,
+                    //     children: <Widget>[
+                    //       Text('2.0',
+                    //           style: TextStyle(
+                    //             fontWeight: FontWeight.bold,
+                    //             color: Colors.white,
+                    //             fontSize: 10.0,
+                    //           )),
+                    //       Text('KM',
+                    //           style: TextStyle(
+                    //             fontWeight: FontWeight.bold,
+                    //             color: Colors.white,
+                    //             fontSize: 10.0,
+                    //           )),
+                    //       SizedBox(
+                    //         height: 25.0,
+                    //       ),
+                    //       Material(
+                    //         color: Colors.white,
+                    //         shadowColor: Colors.grey,
+                    //         elevation: 2.0,
+                    //         borderRadius: BorderRadius.circular(40.0),
+                    //         child: Container(
+                    //           width: 50.0,
+                    //           height: 50.0,
+                    //           decoration: BoxDecoration(
+                    //             borderRadius: BorderRadius.circular(40.0),
+                    //             color: Colors.red,
+                    //           ),
+                    //           child: Center(
+                    //               child: Icon(
+                    //             Icons.favorite,
+                    //             color: Colors.grey[700],
+                    //           )),
+                    //         ),
+                    //       )
+                    //     ],
+                    //   ),
+                    // )
+                  ],
                 ),
-                // Positioned(
-                //   left: 200,
-                //   top: 8.0,
-                //   child: Column(
-                //     crossAxisAlignment: CrossAxisAlignment.center,
-                //     children: <Widget>[
-                //       Text('2.0',
-                //           style: TextStyle(
-                //             fontWeight: FontWeight.bold,
-                //             color: Colors.white,
-                //             fontSize: 10.0,
-                //           )),
-                //       Text('KM',
-                //           style: TextStyle(
-                //             fontWeight: FontWeight.bold,
-                //             color: Colors.white,
-                //             fontSize: 10.0,
-                //           )),
-                //       SizedBox(
-                //         height: 25.0,
-                //       ),
-                //       Material(
-                //         color: Colors.white,
-                //         shadowColor: Colors.grey,
-                //         elevation: 2.0,
-                //         borderRadius: BorderRadius.circular(40.0),
-                //         child: Container(
-                //           width: 50.0,
-                //           height: 50.0,
-                //           decoration: BoxDecoration(
-                //             borderRadius: BorderRadius.circular(40.0),
-                //             color: Colors.red,
-                //           ),
-                //           child: Center(
-                //               child: Icon(
-                //             Icons.favorite,
-                //             color: Colors.grey[700],
-                //           )),
-                //         ),
-                //       )
-                //     ],
-                //   ),
-                // )
-              ],
-            ),
-            circleWidgets(title, desc, icon),
-          ]),
-    ));
+                circleWidgets(title, desc, icon),
+              ]),
+        ));
   }
 
   Widget circleWidgets(String title, String desc, String icon) {

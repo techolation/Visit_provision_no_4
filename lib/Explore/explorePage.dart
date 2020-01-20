@@ -1,11 +1,11 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
-class ImageCarousel extends StatefulWidget {
+class ImageCarouselre extends StatefulWidget {
   ImageCarouselState createState() => new ImageCarouselState();
 }
 
-class ImageCarouselState extends State<ImageCarousel> {
+class ImageCarouselState extends State<ImageCarouselre> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -36,36 +36,37 @@ class ImageCarouselState extends State<ImageCarousel> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(170, 100, 20, 20),
                 child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  // mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Image(
-                      image:
-                          AssetImage('assets/images/exploreImage/homeicon.png'),
-                      height: 20,
-                      width: 20,
-                    )
+                    Container(
+                        padding: EdgeInsets.all(10),
+                        child: Image(
+                          image: AssetImage(
+                              'assets/images/exploreImage/homeicon.png'),
+                          height: 20,
+                          width: 20,
+                        )),
                   ],
                 ),
               ),
             ],
           ),
         ),
-        Text(
-          'Welcome to Province No 4',
-          style: TextStyle(fontSize: 18, color: Colors.black),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Welcome to Province No 4',
+              style: TextStyle(
+                fontSize: 25,
+                color: Colors.blueGrey,
+                fontWeight: FontWeight.bold,
+              ),
+            )
+          ],
         ),
       ],
     );
-
-    // return Scaffold(
-
-    //   body: ListView(
-    //     children: <Widget>[
-    //       imageslidercarousel,
-    //     ],
-    //   ),
-    // );
   }
 }
 
