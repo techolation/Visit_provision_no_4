@@ -6,8 +6,9 @@ import 'package:visit_provision4_2020/HomePage/ReligiousPlace.dart';
 import 'package:visit_provision4_2020/HomePage/Trekking.dart';
 import 'package:visit_provision4_2020/HomePage/Scenery.dart';
 import 'package:visit_provision4_2020/HomePage/Titlepage.dart';
+import 'package:visit_provision4_2020/drawer_descrp/drawer.dart';
+import 'package:visit_provision4_2020/Explore/explorePage.dart';
 
-import 'drawer.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,26 +17,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        drawer: CurvedDrawer(),
         appBar: AppBar(
           title: Text('Welcome to Pokhara'),
         ),
         body: new SingleChildScrollView(
           child: new Column(
             children: <Widget>[
-              Container(
-                width: double.infinity,
-                height: double.infinity,
-                decoration: new BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: Colors.red,
-                  image: new DecorationImage(
-                    image: new AssetImage("assets/images/picnic1.jpg"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
+              ImageCarousel(),
               Titlepage(),
-              CurvedDrawer(),
               PicnicList(),
               Homestay(),
               Scenery(),
@@ -43,11 +33,8 @@ class MyApp extends StatelessWidget {
               Trekking(),
             ],
           ),
-
         ),
       ),
-
     );
   }
 }
-

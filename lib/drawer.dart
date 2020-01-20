@@ -13,11 +13,7 @@ class CurvedDrawer extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Drawer Demo"),
-      ),
-      drawer: SafeArea(
+    return Container(
         child:ClipPath(
           clipper: RoundClipper(),
           child: Drawer(
@@ -51,10 +47,6 @@ class CurvedDrawer extends StatelessWidget {
           
         ),
         ),
-      ),
-      body: Center(
-        child: Text('Main Body'),
-      ),
     );
   }
 }
